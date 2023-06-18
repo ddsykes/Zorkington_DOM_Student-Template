@@ -14,14 +14,14 @@
 */
 
 export const gameDetails = {   
-    title: 'Game Title',
-    desc: 'Welcome to the world of... here are some quick rules & concepts...',
-    author: 'Student Name',
-    cohort: 'SBPT-2022',
-    startingRoomDescription: 'What you see before you is...',
+    title: 'The Select Room Game',
+    desc: 'Welcome to the world of David Sykes. Please play the game and have fun.',
+    author: 'David Sykes',
+    cohort: 'SBPT-May-cohort-2023',
+    startingRoomDescription: 'This game is designed for you to enjoy. Please play and have fun. You can choose from the commands below to enter the different rooms. You have nine commands that are from Inspect to Play Again. Have fun and enjoy the game.',
     playerCommands: [
         // replace these with your games commands as needed
-        'inspect', 'view', 'look', 'pickup',
+        'Inspect', 'View', 'Look', 'Pickup', 'Move','Enter','Returns', 'Finish', 'Play Again',
     ]
     // Commands are basic things that a player can do throughout the game besides possibly moving to another room. This line will populate on the footer of your game for players to reference. 
     // This shouldn't be more than 6-8 different commands.
@@ -32,7 +32,7 @@ export const gameDetails = {
 export const domDisplay = (playerInput) => {
     /* 
         TODO: for students
-        - This function must return a string. 
+        - This function must return a string.  // Working on
         - This will be the information that is displayed within the browsers game interface above the users input field.
 
         - This function name cannot be altered. 
@@ -62,4 +62,61 @@ export const domDisplay = (playerInput) => {
     */
 
     // Your code here
+    
+    //creating objects for each room
+
+    let room1 = {
+        bigRoom:"king Size",
+        littleRoom: "Smaller Room",
+        sizeofRoom:"Large Room",
+        roomSize:"Large Room"
+    }
+    let room2 = {
+        bigRoom:"king Size",
+        littleRoom: "Smaller Room",
+        sizeofRoom:"Large Room",
+        roomSize:"Large Room"
+    }
+    let room3 = {
+        bigRoom:"king Size",
+        littleRoom: "Smaller Room",
+        sizeofRoom:"Large Room",
+        roomSize:"Large Room"
+    }
+    let room4 = {
+        bigRoom:"king Size",
+        littleRoom: "Smaller Room",
+        sizeofRoom:"Large Room",
+        roomSize:"Large Room"
+    }
+    // Creating the classes for each room
+
+    class runRoom{
+        constructor(){
+            this.inspect;
+            this.desc;
+        }
+    }
+
+
+//creating a state machine
+
+let game = {
+    big: ['Large Room'],
+    smallerroom: ['lightroom'],
+    largeroom: ['next to largest room', 'smaller room'],
+    smallestroom: ['littlestroom']
+
+
+}
+
+
+    // Trying to create a function that returns a string
+    
+    domDisplay(inspect, view, look, pickup, move, enter, returns, Finish, playagain );{
+        let playerInput = `${inspect} ${view} ${pickup} ${move} ${enter} ${returns} ${Finish}${playagain}`; 
+        console.log(`Please enter in a command: ${inspect} ${view}${look}${pickup}${move}${enter}${returns}${Finish}${playagain}`);
+        return "Please enter in a command"
+    }
 } 
+
